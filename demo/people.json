@@ -1,0 +1,37 @@
+{
+ "me": [
+  "you@yourco.example"
+ ],
+ "people": {
+  "alex": {
+   "name": "Alex Morgan",
+   "emails": [
+    "alex.morgan@yourco.example"
+   ]
+  },
+  "sam": {
+   "name": "Sam Patel",
+   "emails": [
+    "sam.patel@yourco.example"
+   ]
+  },
+  "priya": {
+   "name": "Priya Shah",
+   "emails": [
+    "priya.shah@harbourline-freight.com"
+   ]
+  },
+  "dan": {
+   "name": "Dan Okafor",
+   "emails": [
+    "dan.okafor@harbourline-freight.com"
+   ]
+  },
+  "ruth": {
+   "name": "Ruth Adeyemi",
+   "emails": [
+    "ruth.adeyemi@kestrel-health.com"
+   ]
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "open": [
+  {
+   "text": "Send Harbourline the security pack",
+   "due": "2026-10-01"
+  },
+  {
+   "text": "Feedback on the founding engineer shortlist",
+   "due": "2026-09-30"
+  },
+  {
+   "text": "Book the Kestrel Health follow-up",
+   "due": "2026-10-02"
+  }
+ ],
+ "closed": [
+  {
+   "text": "Sign off the pilot proposal",
+   "on": "2026-10-01"
+  }
+ ]
+}

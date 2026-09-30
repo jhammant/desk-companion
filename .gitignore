@@ -1,0 +1,6 @@
+__pycache__/
+out/
+data/
+desk.png
+*.tmp.png
+.DS_Store

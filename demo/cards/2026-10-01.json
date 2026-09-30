@@ -1,0 +1,9 @@
+{"cards": [
+  {"start": "10:00",
+   "who": "Priya Shah and Dan Okafor (Harbourline Freight)",
+   "why": "Scope a six-week pilot: their ops, billing and tracking systems, joined up so agents can answer shipment questions",
+   "last": "12 Sep call: schema drift across 40+ carrier APIs is what keeps breaking their integrations",
+   "goal": "Agree the pilot scope, one success measure and a start date",
+   "open": ["Security pack we promised on the 12th", "Who owns their data platform after the reorg"],
+   "prepared": "by Hunter at 09:40, from 11 emails, 2 call transcripts and the CRM"}
+]}
