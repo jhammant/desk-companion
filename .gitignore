@@ -4,3 +4,5 @@ data/
 desk.png
 *.tmp.png
 .DS_Store
+.sessions/
+STATE.md
