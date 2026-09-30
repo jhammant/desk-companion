@@ -1,0 +1,13 @@
+// The facts for one meeting card, for one outside attendee.
+// orbital_cards.py replaces {{email}} with the attendee's address.
+//
+// Orbital finds the Contact from the email, then discovers the rest by type:
+// the last meeting from the email, the open commitments from the company.
+given { email : desk.EmailAddress = "{{email}}" }
+find { desk.Contact } as {
+   name        : desk.PersonName
+   company     : desk.CompanyName
+   lastMet     : desk.LastMetOn
+   lastSummary : desk.LastMeetingSummary
+   open        : desk.OpenCommitment[]
+}

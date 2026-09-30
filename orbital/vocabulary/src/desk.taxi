@@ -1,0 +1,35 @@
+// The vocabulary a desk-companion meeting card needs.
+//
+// Map your own systems onto these types: your CRM's contact email field is a
+// desk.EmailAddress, its company field a desk.CompanyName, your notes app's
+// "last meeting" record a desk.LastMeeting, and so on. Orbital then joins them
+// across systems to answer prep_card.taxiql, without you writing the joins.
+namespace desk {
+
+   type EmailAddress        inherits String
+   type PersonName          inherits String
+   type CompanyName         inherits String
+   type LastMetOn           inherits String   // ISO date, e.g. 2026-09-12
+   type LastMeetingSummary  inherits String
+   type CommitmentText      inherits String
+   type CommitmentDue       inherits String   // ISO date, or absent
+
+   // Someone you meet: whatever system knows who an email address belongs to.
+   model Contact {
+      @Id email : EmailAddress
+      name      : PersonName
+      company   : CompanyName
+   }
+
+   // The last time you met or spoke, and what came of it.
+   model LastMeeting {
+      date    : LastMetOn
+      summary : LastMeetingSummary
+   }
+
+   // Something open between you and them: what you owe, or they owe you.
+   model OpenCommitment {
+      text : CommitmentText
+      due  : CommitmentDue?
+   }
+}

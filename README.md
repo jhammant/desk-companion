@@ -95,6 +95,16 @@ The agent's real job is context: joining your calendar, email, call notes and CR
 so a card can say what happened last time and what you owe. The more of that it can
 reach, the better the card.
 
+### Optional: let Orbital join the facts
+
+If those facts live in several systems, [`orbital/`](orbital/) has a
+[Taxi](https://taxilang.org) vocabulary for a card and a query that
+[Orbital](https://orbitalhq.com) answers by joining your systems for you, plus
+[`orbital_cards.py`](orbital_cards.py), which writes the answers into the cards. It is
+entirely optional: nothing runs unless `DESK_ORBITAL_URL` is set, and it only fills
+fields your agent left empty. `./orbital/demo/try.sh` shows it end to end with the
+sample data in a throwaway Orbital.
+
 ## Configuration
 
 | Variable | Default | |
@@ -110,6 +120,8 @@ reach, the better the card.
 | `DESK_HEADLINE_RSS` | BBC News | `""` turns the headline off |
 | `DESK_GITHUB_USER` | none | shows your star count on the work screen |
 | `DESK_OUT` | `desk.png` | where to write the image (or pass `--out`) |
+| `DESK_ORBITAL_URL` | none | optional: your Orbital, for `orbital_cards.py` |
+| `DESK_ORBITAL_QUERY` | `orbital/prep_card.taxiql` | optional: your own card query |
 
 `--now 2026-10-01T09:45:00+01:00` renders the screen as of any moment, which is handy
 for checking a card before the meeting.

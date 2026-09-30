@@ -1,0 +1,20 @@
+// Two made-up systems, served by mock_server.py with the sample data, to show
+// the mapping: a CRM that knows who an email belongs to, and a notes system
+// that knows meetings and commitments. Replace these with your real services.
+namespace desk.demo {
+
+   @HttpService(baseUrl = "http://host.docker.internal:18901")
+   service DemoCrm {
+      @HttpOperation(method = "GET", url = "/contacts/{email}")
+      operation contactByEmail( @PathVariable("email") email : desk.EmailAddress ) : desk.Contact
+   }
+
+   @HttpService(baseUrl = "http://host.docker.internal:18901")
+   service DemoNotes {
+      @HttpOperation(method = "GET", url = "/last-meeting/{email}")
+      operation lastMeetingWith( @PathVariable("email") email : desk.EmailAddress ) : desk.LastMeeting
+
+      @HttpOperation(method = "GET", url = "/commitments/{company}")
+      operation openCommitmentsWith( @PathVariable("company") company : desk.CompanyName ) : desk.OpenCommitment[]
+   }
+}
